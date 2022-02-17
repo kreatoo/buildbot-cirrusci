@@ -1,0 +1,9 @@
+container:
+  image: ubuntu:latest
+
+check_task:
+  compile_script:
+    printf "build-bot cirrusci\n"
+    sh first_time.sh
+    sh config.sh
+    
