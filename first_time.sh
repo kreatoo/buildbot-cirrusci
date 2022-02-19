@@ -25,20 +25,3 @@ if [ "${SETUP_GD}" = "Yes" ] || [ "${SETUP_GD}" = "yes" ] || [ "${SETUP_GD}" = "
     ./gdrive about
     cd "${MY_DIR}"
 fi
-
-
-if [ "${SETUP_GH}" = "Yes" ] || [ "${SETUP_GH}" = "yes" ] || [ "${SETUP_GH}" = "Y" ]; then
-    wget https://github.com/cli/cli/releases/download/v2.4.0/gh_2.4.0_linux_amd64.deb
-    dpkg -i gh_2.4.0_linux_amd64.deb
-    rm gh_2.4.0_linux_amd64.deb
-    gh auth login
-fi
-
-echo -n "Do you want to setup SourceForge?: "
-read SETUP_SF
-if [ "${SETUP_SF}" = "Yes" ] || [ "${SETUP_SF}" = "yes" ] || [ "${SETUP_SF}" = "Y" ]; then
-    echo -n "Please enter your SourceForge username: "
-    read SF_USER
-    echo -n "After connecting, please run exit."
-    sftp "${SF_USER}"@frs.sourceforge.net
-fi
