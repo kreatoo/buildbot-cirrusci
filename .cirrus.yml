@@ -1,5 +1,5 @@
 container:
-  image: ubuntu:latest
+  image: reactivecircus/android-sdk:latest
 
 env:
   ## Need To Fill
@@ -43,4 +43,4 @@ env:
   TG_CHAT: ""
 
 check_task:
-  compile_script: sh first_time.sh
+  compile_script: sh build.sh
