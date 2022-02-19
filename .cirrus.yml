@@ -40,4 +40,4 @@ env:
   TG_CHAT: ""
 
 check_task:
-  compile_script: sh -c 'printf "build-bot cirrusci\n" && sh first_time.sh && source build.sh'
+  compile_script: sh -c 'printf "build-bot cirrusci\n" && apt-get install sudo -y && sh first_time.sh && source build.sh'
