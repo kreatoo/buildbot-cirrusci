@@ -24,12 +24,15 @@ env:
 
   # Google Drive - Optional
   GD_PATH: ""
+  SETUP_GD: "false"
 
   # Github Releases - Optional
   GH_USERNAME: ""
   GH_REPO: ""
-
+  SETUP_GH: "false"
+  
   # SourceForge - Optional
+  SETUP_SF: "false"
   SF_USER: ""
   SF_PASS: ""
   SF_PROJECT: ""
