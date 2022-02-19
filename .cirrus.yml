@@ -1,5 +1,5 @@
 container:
-  image: reactivecircus/android-sdk:latest
+  image: apon77/aosp:cirrus
 
 env:
   ## Need To Fill
