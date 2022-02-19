@@ -9,11 +9,9 @@
 export MY_DIR=$(pwd)
 
 ## Packages
-sudo apt install git repo adb fastboot curl openssh-client sshpass -y bc bison build-essential flex g++-multilib gcc-multilib gnupg gperf imagemagick lib32ncurses5-dev lib32z1-dev liblz4-tool libncurses5-dev libsdl1.2-dev libwxgtk3.0-gtk3-dev libxml2 libxml2-utils lunzip lzop pngcrush schedtool squashfs-tools xsltproc zip zlib1g-dev openjdk-8-jdk python perl git git-lfs libncurses5 xmlstarlet virtualenv xz-utils rr jq ruby gem ccache libssl-dev hashalot
+apt install git repo adb fastboot curl openssh-client sshpass -y bc bison build-essential flex g++-multilib gcc-multilib gnupg gperf imagemagick lib32ncurses5-dev lib32z1-dev liblz4-tool libncurses5-dev libsdl1.2-dev libwxgtk3.0-gtk3-dev libxml2 libxml2-utils lunzip lzop pngcrush schedtool squashfs-tools xsltproc zip zlib1g-dev openjdk-8-jdk python perl git git-lfs libncurses5 xmlstarlet virtualenv xz-utils rr jq ruby gem ccache libssl-dev hashalot
 
 ## Gdrive
-echo -n "Do you want to setup Gdrive?: "
-read SETUP_GD
 if [ "${SETUP_GD}" = "Yes" ] || [ "${SETUP_GD}" = "yes" ] || [ "${SETUP_GD}" = "Y" ]; then
     GD_FOLDER="${MY_DIR}/gd"
     if ! [ -d "${MY_DIR}"/gd ]; then
@@ -28,11 +26,10 @@ if [ "${SETUP_GD}" = "Yes" ] || [ "${SETUP_GD}" = "yes" ] || [ "${SETUP_GD}" = "
     cd "${MY_DIR}"
 fi
 
-echo -n "Do you want to setup Github releases?: "
-read SETUP_GH
+
 if [ "${SETUP_GH}" = "Yes" ] || [ "${SETUP_GH}" = "yes" ] || [ "${SETUP_GH}" = "Y" ]; then
     wget https://github.com/cli/cli/releases/download/v2.4.0/gh_2.4.0_linux_amd64.deb
-    sudo dpkg -i gh_2.4.0_linux_amd64.deb
+    dpkg -i gh_2.4.0_linux_amd64.deb
     rm gh_2.4.0_linux_amd64.deb
     gh auth login
 fi
