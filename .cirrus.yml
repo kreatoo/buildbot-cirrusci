@@ -43,4 +43,4 @@ env:
   TG_CHAT: ""
 
 check_task:
-  compile_script: sh build.sh
+  compile_script: bash buildbot-cirrusci/build.sh
