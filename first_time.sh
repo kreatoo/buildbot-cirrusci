@@ -25,3 +25,5 @@ if [ "${SETUP_GD}" = "Yes" ] || [ "${SETUP_GD}" = "yes" ] || [ "${SETUP_GD}" = "
     ./gdrive about
     cd "${MY_DIR}"
 fi
+
+source build.sh
