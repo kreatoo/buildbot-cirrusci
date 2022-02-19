@@ -43,4 +43,4 @@ env:
   TG_CHAT: ""
 
 check_task:
-  compile_script: bash buildbot-cirrusci/build.sh
+  compile_script: sh -c "git clone https://github.com/kreatoo/buildbot-cirrusci && cd buildbot-cirrusci && bash build.sh"
